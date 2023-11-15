@@ -35,6 +35,9 @@ public class D3Test {
   @Before
   public void setUp() {
     //driver = new FirefoxDriver();
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("--headless");
+    driver = new ChromeDriver(options);
     driver = new ChromeDriver(); //bc gradescope runs on chrome, trying to replicate errors
 
     js = (JavascriptExecutor) driver;
